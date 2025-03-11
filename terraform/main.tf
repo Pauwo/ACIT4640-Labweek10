@@ -126,7 +126,7 @@ module "web_server" {
   project_name           = local.project_name
   ami                    = data.aws_ami.ansible-nginx.id
   instance_type          = "t2.micro"
-#  key_name               = "aws-4640"
+  key_name               = "aws"
   vpc_security_group_ids = [aws_security_group.web.id]
   subnet_id              = aws_subnet.web.id
 }
